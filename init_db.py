@@ -1,15 +1,17 @@
 import sqlite3
 
-# abre conexão
-conn = sqlite3.connect('database.db')
+def init_db():
+    conn = sqlite3.connect('users.db')
+    cursor = conn.cursor()
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            nome TEXT UNIQUE NOT NULL,
+            senha TEXT NOT NULL
+        )
+    ''')
+    conn.commit()
+    conn.close()
 
-# localização do sql
-SCHEMA = "database/schema.sql"
-
-# executa declarações do sql para o banco
-with open(SCHEMA) as f:
-    conn.executescript(f.read())
-
-# encerra operações
-conn.commit()
-conn.close()
+if __name__ == '__main__':
+    init_db()

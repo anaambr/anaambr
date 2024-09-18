@@ -9,49 +9,46 @@ body, html {
     height: 100vh;
 }
 
+.index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: rgb(154, 166, 255);
+    border-radius: 25px solid rgb(60, 206, 255);
+    width: 50%;
+    padding: 20px 40px;
+
+}
+.index2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: rgb(154, 166, 255);
+    border-radius: 25px solid rgb(60, 206, 255);
+    width: 50%;
+    padding: 20px 40px;
+}
+.index2 a {
+    font-size: 20px;
+    border-radius: 25px;
+    padding: 5px 10px;
+    color: black;
+}
 .container {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.nav {
-    height: 100px;
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px 40px;
-}
-
-.nav h2 {
-    font-size: 40px;
-    padding: 0 5px;
-    margin: 0 10px;
-}
-
-.main {
-    padding: 20px 40px;
-    display: flex;
-    height: 100%;
-    background-color: antiquewhite;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.nav h2:hover {
-    color: yellow;
-    font-size: 45px;
-}
 
 .users {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(255, 211, 154);
-    border-radius: 25px solid rgb(255, 170, 60);
+    background-color: rgb(154, 166, 255);
+    border-radius: 25px solid rgb(60, 206, 255);
     width: 50%;
     padding: 20px 40px;
 }
@@ -68,10 +65,6 @@ body, html {
     text-decoration: none;
 }
 
-.nav h2 a:visited {
-    color: yellow;
-}
-
 .users input, button {
     font-size: 20px;
     border-radius: 25px;
@@ -86,27 +79,4 @@ body, html {
     align-self: flex-end;
 }
 
-.users button:hover {
-    background-color: black;
-    border: 2px solid green;
-    color: green;
-}
 
-.users ul li span {
-    font-weight: bolder;
-}
-
-.users ul li {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    padding: 10px 20px;
-    gap: 10px;
-    font-size: 20px;
-}
-
-.warning {
-    color: red;
-
-    font-size: 14px;
-}
